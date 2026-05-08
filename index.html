@@ -1,109 +1,347 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Yonná Galvão</title>
 
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
 
-  background: 
-    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-    url("bg.jpg");
-
-  background-size: cover;
-  background-position: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.container {
-  text-align: center;
-  padding: 40px 20px;
+body{
+
+  font-family:'Montserrat', sans-serif;
+
+  min-height:100vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+  url("bg.jpg");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+
+  color:white;
 }
 
-.perfil {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 0px solid green;
-  object-fit: cover;
+/* CONTAINER */
+
+.container{
+
+  width:100%;
+  max-width:420px;
+
+  padding:20px;
+
+  text-align:center;
 }
 
-.nome {
-  font-size: 32px;
-  color: #2f7d4c;
-  margin: 15px 0;
-  font-family: cursive;
+/* TÍTULO */
+
+.titulo{
+
+  margin-bottom:25px;
+  
 }
 
-.redes {
-  margin: 20px 0;
+.logo-nome{
+
+  width:320px;
+
+  max-width:90%;
+
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,0.25));
 }
 
-.redes img {
-  width: 45px;
-  margin: 0 8px;
-  cursor: pointer;
+.titulo p{
+
+  font-size:16px;
+
+  font-weight:800;
+
+  color:#b8f5a8;
+
+  letter-spacing:2px;
+
+  margin-top:5px;
+
+  text-transform:uppercase;
+
+  text-shadow:0 2px 8px rgba(0,0,0,0.25);
 }
 
-.botao {
-  display: block;
-  margin: 15px auto;
-  width: 260px;
+/* REDES */
+
+.redes{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:18px;
+
+  margin:420px 0 20px;
 }
 
-.botao img {
-  width: 100%;
-  border-radius: 30px;
-  transition: 0.3s;
+.redes img{
+
+  width:55px;
+
+  height:55px;
+
+  transition:.3s;
+
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,0.25));
 }
 
-.botao img:hover {
-  transform: scale(1.05);
+.redes img:hover{
+
+  transform:scale(1.1);
 }
 
-.rodape {
-  background-color: #007BFF;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-  margin-top: 40px;
+/* TEXTO */
+
+.frase{
+
+  font-size:14px;
+
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  margin-top:30px;
+
+  margin-bottom:25px;
+
+  text-shadow:0 2px 8px rgba(0,0,0,0.25);
 }
+
+/* BOTÕES */
+
+.botao{
+  width:75%;
+  height:35px;
+
+  border-radius:10px;
+  margin:0 auto 15px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+
+  text-decoration:none;
+
+  font-weight:700;
+  letter-spacing:2px;
+  font-size:13px;
+
+  transition:.3s;
+}
+
+/* BOTÃO VERDE */
+
+.verde{
+  background:#34d06f;
+  color:white;
+}
+
+/* BOTÕES PREMIUM */
+
+.botoes{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:16px;
+
+  margin-top:20px;
+}
+
+.botoes img{
+
+  width:63px;
+
+  height:auto;
+
+  transition:.3s;
+
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+}
+
+.botoes img:hover{
+
+  transform:scale(1.1);
+
+  filter:drop-shadow(0 0 12px rgba(255,255,255,0.5));
+}
+
+/* RODAPÉ */
+
+.rodape{
+
+  width:100%;
+
+  text-align:center;
+
+  padding:15px 10px;
+
+  font-size:12px;
+
+  font-weight:500;
+
+  color:white;
+
+  background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:480px){
+
+  .logo-nome{
+    margin-top:280px;
+    width:400px;
+  }
+
+  .titulo p{
+
+    font-size:13px;
+  }
+
+  .redes{
+
+    margin-top:110px;
+
+    gap:15px;
+  }
+
+  .redes img{
+
+    width:50px;
+
+    height:50px;
+  }
+
+  .botoes{
+
+    gap:12px;
+  }
+
+  .botoes img{
+
+    width:57px;
+  }
+
+}
+
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-  <!-- FOTO -->
-  <img src="perfil.png" class="perfil">
+  <!-- LOGO/NOME -->
 
-  <!-- NOME -->
-  <div class="nome">Yonná Galvão</div>
+  <div class="titulo">
 
-  <!-- REDES -->
-  <div class="redes">
-    <a href="https://www.instagram.com/yonna.galvao?igsh=MWU5bXRycTRraGY4ZA%3D%3D&utm_source=qr"><img src="instagram.png"></a>
-    <a href="https://x.com/euyonnagalvao?s=21"><img src="x.png"></a>
-    <a href="https://www.tiktok.com/@yonna.galvao?_r=1&_t=ZS-95fia1yuOFp"><img src="tiktok.png"></a>
+    <img src="nome.png" class="logo-nome">
+
+    <p>WELCOME TO MY WORLD</p>
+
   </div>
 
-  <!-- BOTÕES -->
-  <a href="https://onlyfans.com/yonnagalvao/c50" class="botao"><img src="botao1.png"></a>
-  <a href="https://onlyfans.com/bkangel/c3" class="botao"><img src="botao2.png"></a>
-  <a href="https://privacy.com.br/profile/Yonnagalvao" class="botao"><img src="botao3.png"></a>
-  <a href="https://www.myclosecommunity.com.br/quem-te-indicou/?ref=43Q49V12G6&context=Ionagalvao" class="botao"><img src="botao4.png"></a>
+  <!-- REDES -->
+
+  <div class="redes">
+
+    <a href="https://www.instagram.com/yonna.galvao?igsh=MWU5bXRycTRraGY4ZA%3D%3D&utm_source=qr">
+
+      <img src="instagram.png">
+
+    </a>
+
+    <a href="https://www.tiktok.com/@yonna.galvao?_r=1&_t=ZS-95fia1yuOFp">
+
+      <img src="tiktok.png">
+
+    </a>
+
+    <a href="https://x.com/euyonnagalvao?s=21">
+
+      <img src="x.png">
+
+    </a>
+
+    <a href="https://www.myclosecommunity.com.br/quem-te-indicou/?ref=43Q49V12G6&context=Ionagalvao">
+
+      <img src="myclose.png">
+
+    </a>
+
+
+  </div>
+
+  <!-- TEXTO -->
+
+  <div class="botao verde">
+
+    GET CLOSER TO ME:
+
+  </div>
+
+  <!-- BOTÕES PREMIUM -->
+
+  <div class="botoes">
+
+    <a href="https://privacy.com.br/profile/Yonnagalvao">
+
+      <img src="privacy.png">
+
+    </a>
+
+    <a href="https://onlyfans.com/yonnagalvao/c50">
+
+      <img src="onlyfree.png">
+
+    </a>
+
+    <a href="https://onlyfans.com/bkangel/c3">
+
+      <img src="onlyvip.png">
+
+    </a>
+
+    
+  </div>
 
 </div>
 
+<!-- RODAPÉ -->
+
 <footer class="rodape">
+
   Yonna Galvão © 2026 - Todos os direitos reservados
+
 </footer>
 
 </body>
